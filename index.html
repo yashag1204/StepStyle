@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StepStyle Footwear – Walk With Confidence. Shop premium running shoes, sneakers, formal shoes, sandals & more. Fast delivery across India." />
+  <meta name="keywords" content="shoes, footwear, running shoes, sneakers, sandals, formal shoes, buy shoes online" />
+  <meta name="author" content="StepStyle Footwear" />
+  <meta property="og:title" content="StepStyle Footwear – Walk With Confidence" />
+  <meta property="og:description" content="Discover premium footwear for every occasion. StepStyle – your local shoe destination." />
+  <meta property="og:type" content="website" />
+  <title>StepStyle Footwear – Walk With Confidence</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon (SVG inline fallback) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👟</text></svg>" />
+</head>
+<body class="light-theme" data-theme="light">
+
+  <!-- ══════════════════════════════════════
+       LOADING SCREEN
+  ══════════════════════════════════════ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__shoe">👟</div>
+      <div class="loader__bar"><div class="loader__fill"></div></div>
+      <p class="loader__text">StepStyle</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       STICKY NAVIGATION
+  ══════════════════════════════════════ -->
+  <header class="header" id="header" role="banner">
+    <nav class="nav container" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="#home" class="nav__logo" aria-label="StepStyle Home">
+        <span class="nav__logo-icon">👟</span>
+        <span class="nav__logo-text">Step<strong>Style</strong></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav__links" role="list">
+        <li><a href="#home" class="nav__link active">Home</a></li>
+        <li><a href="#featured" class="nav__link">Products</a></li>
+        <li><a href="#categories" class="nav__link">Categories</a></li>
+        <li><a href="#new-arrivals" class="nav__link">New Arrivals</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav__actions">
+        <!-- Search Toggle -->
+        <button class="nav__btn nav__btn--search" id="searchToggle" aria-label="Toggle search" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+
+        <!-- Wishlist -->
+        <button class="nav__btn nav__btn--wishlist" aria-label="View wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="nav__badge" id="wishlistCount">0</span>
+        </button>
+
+        <!-- Cart -->
+        <button class="nav__btn nav__btn--cart" aria-label="View cart" id="cartBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="nav__badge" id="cartCount">0</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="nav__btn nav__btn--theme" id="themeToggle" aria-label="Toggle dark/light theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <!-- Hamburger (Mobile) -->
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar" role="search" aria-hidden="true">
+      <div class="container">
+        <input type="search" class="search-bar__input" id="searchInput" placeholder="Search shoes, brands, categories…" aria-label="Search products" />
+        <button class="search-bar__close" id="searchClose" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+    <div class="mobile-menu__overlay" id="menuOverlay"></div>
+    <nav class="mobile-menu__panel">
+      <button class="mobile-menu__close" id="menuClose" aria-label="Close menu">✕</button>
+      <ul class="mobile-menu__links" role="list">
+        <li><a href="#home" class="mobile-menu__link">Home</a></li>
+        <li><a href="#featured" class="mobile-menu__link">Products</a></li>
+        <li><a href="#categories" class="mobile-menu__link">Categories</a></li>
+        <li><a href="#new-arrivals" class="mobile-menu__link">New Arrivals</a></li>
+        <li><a href="#why-us" class="mobile-menu__link">Why Us</a></li>
+        <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ══════════════════════════════════════
+         HERO SECTION
+    ══════════════════════════════════════ -->
+    <section class="hero" id="home" aria-label="Hero banner">
+      <div class="hero__bg-text" aria-hidden="true">STEP</div>
+      <div class="container hero__container">
+        <div class="hero__content reveal">
+          <span class="hero__eyebrow">New Season 2025</span>
+          <h1 class="hero__title">Walk With<br /><em>Confidence</em></h1>
+          <p class="hero__subtitle">Premium footwear crafted for every stride — from morning runs to midnight strolls. Discover your perfect pair.</p>
+          <div class="hero__actions">
+            <a href="#featured" class="btn btn--primary">Shop Now</a>
+            <a href="#categories" class="btn btn--outline">Browse Categories</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat"><strong>500+</strong><span>Styles</span></div>
+            <div class="hero__stat-divider"></div>
+            <div class="hero__stat"><strong>50K+</strong><span>Happy Customers</span></div>
+            <div class="hero__stat-divider"></div>
+            <div class="hero__stat"><strong>4.9★</strong><span>Avg Rating</span></div>
+          </div>
+        </div>
+        <div class="hero__visual reveal reveal--right">
+          <div class="hero__img-wrap">
+            <img src="assets/images/hero_featured.jpg" alt="Featured premium running shoe" class="hero__img" loading="eager" width="700" height="700" />
+            <div class="hero__badge glass">
+              <span class="hero__badge-label">Best Seller</span>
+              <span class="hero__badge-price">₹4,999</span>
+            </div>
+            <div class="hero__floating-tag glass">🔥 Trending Now</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         MARQUEE TICKER
+    ══════════════════════════════════════ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Running Shoes</span><span>✦</span>
+        <span>Casual Sneakers</span><span>✦</span>
+        <span>Sports Shoes</span><span>✦</span>
+        <span>Sandals</span><span>✦</span>
+        <span>Formal Shoes</span><span>✦</span>
+        <span>Free Shipping ₹999+</span><span>✦</span>
+        <span>Running Shoes</span><span>✦</span>
+        <span>Casual Sneakers</span><span>✦</span>
+        <span>Sports Shoes</span><span>✦</span>
+        <span>Sandals</span><span>✦</span>
+        <span>Formal Shoes</span><span>✦</span>
+        <span>Free Shipping ₹999+</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         FEATURED PRODUCTS
+    ══════════════════════════════════════ -->
+    <section class="section products" id="featured" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__eyebrow">Our Collection</span>
+          <h2 class="section__title" id="featured-heading">Featured Products</h2>
+          <p class="section__desc">Handpicked styles loved by our community — comfort, style, and durability in every pair.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs reveal" role="tablist" aria-label="Filter products by category">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-tab" data-filter="running" role="tab" aria-selected="false">Running</button>
+          <button class="filter-tab" data-filter="casual" role="tab" aria-selected="false">Casual</button>
+          <button class="filter-tab" data-filter="sports" role="tab" aria-selected="false">Sports</button>
+          <button class="filter-tab" data-filter="formal" role="tab" aria-selected="false">Formal</button>
+          <button class="filter-tab" data-filter="sandals" role="tab" aria-selected="false">Sandals</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="products__grid" id="productGrid" aria-label="Products list">
+          <!-- Injected by JS -->
+        </div>
+
+        <div class="section__cta reveal">
+          <a href="#new-arrivals" class="btn btn--outline">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CATEGORIES SECTION
+    ══════════════════════════════════════ -->
+    <section class="section categories" id="categories" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__eyebrow">Browse By</span>
+          <h2 class="section__title" id="categories-heading">Shop Categories</h2>
+        </div>
+        <div class="categories__grid reveal">
+          <a href="#featured" class="category-card category-card--large" data-category="running" aria-label="Shop Running Shoes">
+            <img src="assets/images/running_shoes.jpg" alt="Running Shoes" loading="lazy" width="600" height="400" />
+            <div class="category-card__overlay">
+              <span class="category-card__label">Running Shoes</span>
+              <span class="category-card__count">48 Styles</span>
+            </div>
+          </a>
+          <a href="#featured" class="category-card" data-category="casual" aria-label="Shop Casual Sneakers">
+            <img src="assets/images/casual_sneakers.jpg" alt="Casual Sneakers" loading="lazy" width="400" height="300" />
+            <div class="category-card__overlay">
+              <span class="category-card__label">Casual Sneakers</span>
+              <span class="category-card__count">72 Styles</span>
+            </div>
+          </a>
+          <a href="#featured" class="category-card" data-category="sports" aria-label="Shop Sports Shoes">
+            <img src="assets/images/sports_shoes.jpg" alt="Sports Shoes" loading="lazy" width="400" height="300" />
+            <div class="category-card__overlay">
+              <span class="category-card__label">Sports Shoes</span>
+              <span class="category-card__count">35 Styles</span>
+            </div>
+          </a>
+          <a href="#featured" class="category-card" data-category="formal" aria-label="Shop Formal Shoes">
+            <img src="assets/images/formal_shoes.jpg" alt="Formal Shoes" loading="lazy" width="400" height="300" />
+            <div class="category-card__overlay">
+              <span class="category-card__label">Formal Shoes</span>
+              <span class="category-card__count">29 Styles</span>
+            </div>
+          </a>
+          <a href="#featured" class="category-card" data-category="sandals" aria-label="Shop Sandals">
+            <img src="assets/images/sandals.jpg" alt="Sandals" loading="lazy" width="400" height="300" />
+            <div class="category-card__overlay">
+              <span class="category-card__label">Sandals & Slippers</span>
+              <span class="category-card__count">54 Styles</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         NEW ARRIVALS
+    ══════════════════════════════════════ -->
+    <section class="section new-arrivals" id="new-arrivals" aria-labelledby="arrivals-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__eyebrow">Just Dropped</span>
+          <h2 class="section__title" id="arrivals-heading">New Arrivals</h2>
+          <p class="section__desc">Fresh out of the box — be the first to own the latest styles.</p>
+        </div>
+        <div class="arrivals__grid" id="arrivalsGrid">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         WHY CHOOSE US
+    ══════════════════════════════════════ -->
+    <section class="section why-us" id="why-us" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__eyebrow">Our Promise</span>
+          <h2 class="section__title" id="why-heading">Why StepStyle?</h2>
+        </div>
+        <div class="why-us__grid">
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">🚀</div>
+            <h3 class="why-card__title">Fast Delivery</h3>
+            <p class="why-card__desc">Same-day delivery in Dehradun. Next-day across Uttarakhand. Free shipping on orders above ₹999.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">✅</div>
+            <h3 class="why-card__title">100% Authentic</h3>
+            <p class="why-card__desc">Every pair comes with a brand authenticity certificate. Zero counterfeits, zero compromise.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">🔄</div>
+            <h3 class="why-card__title">Easy Returns</h3>
+            <p class="why-card__desc">30-day hassle-free returns and exchanges. No questions asked. Your satisfaction is our priority.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">💰</div>
+            <h3 class="why-card__title">Best Price Guarantee</h3>
+            <p class="why-card__desc">Found it cheaper elsewhere? We'll match the price and give you an extra 5% off.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">🎁</div>
+            <h3 class="why-card__title">Loyalty Rewards</h3>
+            <p class="why-card__desc">Earn StepCoins on every purchase. Redeem for discounts, free shipping, and exclusive drops.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-card__icon" aria-hidden="true">🛠️</div>
+            <h3 class="why-card__title">Expert Support</h3>
+            <p class="why-card__desc">Our footwear experts are available 7 days a week. Chat, call, or walk into our Dehradun store.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         STATISTICS BANNER
+    ══════════════════════════════════════ -->
+    <section class="stats-banner" aria-label="Store statistics">
+      <div class="container stats-banner__grid">
+        <div class="stat-item reveal">
+          <span class="stat-item__number" data-target="50000">0</span>
+          <span class="stat-item__suffix">+</span>
+          <span class="stat-item__label">Happy Customers</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-item__number" data-target="500">0</span>
+          <span class="stat-item__suffix">+</span>
+          <span class="stat-item__label">Shoe Styles</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-item__number" data-target="12">0</span>
+          <span class="stat-item__suffix"></span>
+          <span class="stat-item__label">Years in Business</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-item__number" data-target="30">0</span>
+          <span class="stat-item__suffix">+</span>
+          <span class="stat-item__label">Premium Brands</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         TESTIMONIALS
+    ══════════════════════════════════════ -->
+    <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__eyebrow">Real Reviews</span>
+          <h2 class="section__title" id="testimonials-heading">What Customers Say</h2>
+        </div>
+        <div class="testimonials__track-wrap">
+          <div class="testimonials__track" id="testimonialsTrack" aria-live="polite">
+            <!-- Injected by JS -->
+          </div>
+          <div class="testimonials__controls" aria-label="Testimonial navigation">
+            <button class="testimonials__btn" id="prevTestimonial" aria-label="Previous testimonial">‹</button>
+            <div class="testimonials__dots" id="testimonialDots" role="tablist"></div>
+            <button class="testimonials__btn" id="nextTestimonial" aria-label="Next testimonial">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         NEWSLETTER
+    ══════════════════════════════════════ -->
+    <section class="newsletter" aria-labelledby="newsletter-heading">
+      <div class="container newsletter__container">
+        <div class="newsletter__content reveal">
+          <span class="section__eyebrow">Stay Updated</span>
+          <h2 class="newsletter__title" id="newsletter-heading">Get 10% Off Your First Order</h2>
+          <p class="newsletter__desc">Subscribe for exclusive deals, new arrivals, and style tips delivered to your inbox.</p>
+        </div>
+        <form class="newsletter__form reveal" id="newsletterForm" novalidate aria-label="Newsletter subscription">
+          <div class="newsletter__input-wrap">
+            <input type="email" class="newsletter__input" id="newsletterEmail" placeholder="Enter your email address" aria-label="Email address" required />
+            <button type="submit" class="btn btn--primary newsletter__submit">Subscribe</button>
+          </div>
+          <p class="newsletter__fine">No spam, unsubscribe anytime. By subscribing you agree to our Privacy Policy.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CONTACT
+    ══════════════════════════════════════ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact__container">
+        <div class="contact__info reveal">
+          <span class="section__eyebrow">Get In Touch</span>
+          <h2 class="section__title" id="contact-heading">Visit Our Store</h2>
+          <p class="contact__desc">Step into our flagship store in Dehradun or reach us online. We'd love to help you find the perfect pair.</p>
+          <ul class="contact__list" role="list">
+            <li class="contact__item">
+              <span class="contact__icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Store Address</strong>
+                <p>12, Rajpur Road, Dehradun, Uttarakhand 248001</p>
+              </div>
+            </li>
+            <li class="contact__item">
+              <span class="contact__icon" aria-hidden="true">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+911352720000">+91 135 272 0000</a>
+              </div>
+            </li>
+            <li class="contact__item">
+              <span class="contact__icon" aria-hidden="true">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:hello@stepstyle.in">hello@stepstyle.in</a>
+              </div>
+            </li>
+            <li class="contact__item">
+              <span class="contact__icon" aria-hidden="true">🕒</span>
+              <div>
+                <strong>Store Hours</strong>
+                <p>Mon–Sat: 10 AM – 8 PM &nbsp;|&nbsp; Sun: 11 AM – 6 PM</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact__form glass reveal" id="contactForm" novalidate aria-label="Contact form">
+          <h3 class="contact__form-title">Send Us a Message</h3>
+          <div class="form-group">
+            <label for="contactName" class="form-label">Full Name</label>
+            <input type="text" id="contactName" class="form-input" placeholder="Your full name" required aria-required="true" />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail" class="form-label">Email</label>
+            <input type="email" id="contactEmail" class="form-input" placeholder="your@email.com" required aria-required="true" />
+          </div>
+          <div class="form-group">
+            <label for="contactPhone" class="form-label">Phone (Optional)</label>
+            <input type="tel" id="contactPhone" class="form-input" placeholder="+91 00000 00000" />
+          </div>
+          <div class="form-group">
+            <label for="contactMsg" class="form-label">Message</label>
+            <textarea id="contactMsg" class="form-input form-textarea" placeholder="How can we help you?" rows="4" required aria-required="true"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <div class="form-feedback" id="contactFeedback" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__top">
+      <div class="footer__brand">
+        <a href="#home" class="nav__logo" aria-label="StepStyle Home">
+          <span class="nav__logo-icon">👟</span>
+          <span class="nav__logo-text">Step<strong>Style</strong></span>
+        </a>
+        <p class="footer__tagline">Walk With Confidence</p>
+        <p class="footer__about">Balaji Footwear in Khair, Aligarh, U.P. Contact: 8532903632.</p>
+        <div class="footer__social" aria-label="Social media links">
+          <a href="#" class="footer__social-link" aria-label="Instagram"><img src="assets/icons/instagram.png" alt="Instagram" width="18" height="18"></a>
+          <a href="#" class="footer__social-link" aria-label="Facebook"><img src="assets/icons/facebook.png" alt="Facebook" width="18" height="18"></a>
+          <a href="#" class="footer__social-link" aria-label="Twitter"><img src="assets/icons/twitter.png" alt="Twitter" width="18" height="18"></a>
+          <a href="#" class="footer__social-link" aria-label="YouTube"><img src="assets/icons/youtube.png" alt="YouTube" width="18" height="18"></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links" role="list">
+          <li><a href="#home" class="footer__link">Home</a></li>
+          <li><a href="#featured" class="footer__link">Products</a></li>
+          <li><a href="#categories" class="footer__link">Categories</a></li>
+          <li><a href="#new-arrivals" class="footer__link">New Arrivals</a></li>
+          <li><a href="#why-us" class="footer__link">About Us</a></li>
+          <li><a href="#contact" class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Categories</h4>
+        <ul class="footer__links" role="list">
+          <li><a href="#categories" class="footer__link">Running Shoes</a></li>
+          <li><a href="#categories" class="footer__link">Casual Sneakers</a></li>
+          <li><a href="#categories" class="footer__link">Sports Shoes</a></li>
+          <li><a href="#categories" class="footer__link">Sandals</a></li>
+          <li><a href="#categories" class="footer__link">Slippers</a></li>
+          <li><a href="#categories" class="footer__link">Formal Shoes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Customer Care</h4>
+        <ul class="footer__links" role="list">
+          <li><a href="#" class="footer__link">Track My Order</a></li>
+          <li><a href="#" class="footer__link">Return Policy</a></li>
+          <li><a href="#" class="footer__link">Size Guide</a></li>
+          <li><a href="#" class="footer__link">FAQs</a></li>
+          <li><a href="#" class="footer__link">Privacy Policy</a></li>
+          <li><a href="#" class="footer__link">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom container">
+      <p>© <span id="year"></span> StepStyle Footwear. All rights reserved. Made with ❤️ in Dehradun.</p>
+      <div class="footer__payments" aria-label="Accepted payment methods">
+        <span class="payment-badge">UPI</span>
+        <span class="payment-badge">Visa</span>
+        <span class="payment-badge">Mastercard</span>
+        <span class="payment-badge">Rupay</span>
+        <span class="payment-badge">COD</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer" id="cartDrawer" aria-hidden="true" role="dialog" aria-label="Shopping cart">
+    <div class="cart-drawer__overlay" id="cartOverlay"></div>
+    <div class="cart-drawer__panel">
+      <div class="cart-drawer__header">
+        <h3>Your Cart <span id="cartItemsCount">(0)</span></h3>
+        <button class="cart-drawer__close" id="cartClose" aria-label="Close cart">✕</button>
+      </div>
+      <div class="cart-drawer__body" id="cartBody">
+        <div class="cart-drawer__empty">
+          <span aria-hidden="true">🛒</span>
+          <p>Your cart is empty</p>
+          <a href="#featured" class="btn btn--primary btn--sm">Shop Now</a>
+        </div>
+      </div>
+      <div class="cart-drawer__footer" id="cartFooter" style="display:none">
+        <div class="cart-drawer__total">
+          <span>Total</span>
+          <strong id="cartTotal">₹0</strong>
+        </div>
+        <button class="btn btn--primary btn--full">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Main JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
